@@ -491,13 +491,16 @@ html{scroll-behavior:smooth}
 <script>
 (function(){
   var vids=[].slice.call(document.querySelectorAll('video[data-auto]'));
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if('IntersectionObserver' in window && !reduce){
+  function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play().catch(function(){});});}
+  if('IntersectionObserver' in window){
+    var pre=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+      if(e.isIntersecting&&v.preload!=='auto'){v.preload='auto';v.load();pre.unobserve(v);}
+    });},{rootMargin:'800px 0px'});
     var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
-      if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}
-    });},{threshold:.35});
-    vids.forEach(function(v){io.observe(v)});
-  }
+      if(e.isIntersecting){tryPlay(v);}else{v.pause();}
+    });},{threshold:.2});
+    vids.forEach(function(v){pre.observe(v);io.observe(v)});
+  }else{vids.forEach(function(v){v.preload='auto';tryPlay(v)});}
   vids.forEach(function(v){v.addEventListener('click',function(){v.paused?v.play():v.pause()})});
   document.querySelectorAll('.snd').forEach(function(b){
     b.addEventListener('click',function(e){e.stopPropagation();var v=b.parentNode.querySelector('video');
@@ -548,6 +551,17 @@ html{scroll-behavior:smooth}
   var mb=document.getElementById('mute');v.muted=true;
   mb.onclick=function(){v.muted=!v.muted;mb.textContent=v.muted?'소리 켜기':'소리 끄기';};
   v.addEventListener('click',function(){if(started)(v.paused?v.play():v.pause())});
+  var userPaused=false;
+  v.addEventListener('pause',function(){if(v.dataset.scrollPause){delete v.dataset.scrollPause;}else if(!v.ended){userPaused=true;}});
+  v.addEventListener('play',function(){userPaused=false;});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){
+        if(!started){go(0,true);}
+        else if(v.paused&&!userPaused&&!v.ended){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+      }else if(!v.paused){v.dataset.scrollPause='1';v.pause();}
+    });},{threshold:.4}).observe(v);
+  }
 })();
 </script>
 
