@@ -521,12 +521,9 @@ html{scroll-behavior:smooth}
     ['v11_washing','','⑤ 가정','집 앞에서 빨래하는 주민'],
     ['v12_interview_home','','⑤ 주민 인터뷰','식수시설이 가까워진 뒤 달라진 생활'],
     ['v13_to_school','','이동','마을 초등학교로',1],
-    ['v14_school_tap','','⑥ 학교식수대','학교식수대 1곳에서 5곳으로'],
-    ['v15_school_voice','','⑥ 학교식수대','쉬는 시간의 식수대'],
-    ['v16_children_wave','','⑥ 학교식수대','손을 흔드는 아이들'],
-    ['v17_children','','바소다위시 마을','1,900명이 이 물을 마십니다']
+    ['v14_school_tap','','⑥ 학교식수대','학교식수대 1곳에서 5곳으로']
   ];
-  var D=[9,12,10,10,9,14,8,11,12,16,11,18,12,15,14,4,9];
+  var D=[9,12,10,10,9,14,8,11,12,16,11,18,12,15];
   var v=document.getElementById('fv'),track=document.getElementById('track'),cur=0,started=false;
   var lp=document.getElementById('lp'),lc=document.getElementById('lc');
   var segs=C.map(function(c,i){var b=document.createElement('button');b.type='button';b.className='seg'+(c[4]?' move':'');b.style.flexGrow=D[i];b.setAttribute('aria-label',c[2]);b.title=c[2];b.appendChild(document.createElement('i'));b.onclick=function(){go(i,true)};track.appendChild(b);return b;});
