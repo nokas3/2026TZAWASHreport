@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>바소다위시 물길 12년 · 2026 탄자니아 WASH 모니터링</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: 밝은 에디토리얼 스크롤. 왼쪽에 주황색 '물길' 레일이 관정에서 학교까지 이어지고, 지점 사이에 이동 영상 띠가 끼어든다. */
+@font-face{font-family:"Degular";src:url("assets/Degular-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+@font-face{font-family:"NanumSquare";src:url("assets/NanumSquareOTF_acR.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"NanumSquare";src:url("assets/NanumSquareOTF_acB.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"NanumSquare";src:url("assets/NanumSquareOTF_acEB.otf") format("opentype");font-weight:800;font-display:swap}
+:root{
+  --orange:#FF5515; --orange-deep:#E32C13; --orange-soft:#FFEBE1; --orange-200:#FFD5BF;
+  --ink:#111222; --ink-2:#3F3D4C; --muted:#565461;
+  --field:#F3F2F0; --field-2:#DEDBD7; --paper:#FFFFFF; --water:#0C7993;
+  --display:"Degular","NanumSquare",system-ui,sans-serif;
+  --kr:"NanumSquare","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--kr);font-size:16px;line-height:1.7;word-break:keep-all;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+img,video{max-width:100%;display:block}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--orange);text-transform:uppercase}
+.en{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:.01em}
+.num{font-variant-numeric:tabular-nums}
+
+/* top bar */
+.top{border-bottom:1px solid var(--field-2)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.top img{height:30px;width:auto}
+.top span{font-size:13px;color:var(--muted);text-align:right}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--field)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:64px 72px}
+.hero h1{font-weight:800;font-size:clamp(34px,5.2vw,60px);line-height:1.12;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lead{margin-top:20px;font-size:18px;color:var(--ink-2);max-width:34em}
+.hero .tag{display:inline-flex;gap:8px;align-items:center;margin-bottom:20px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.hero .tag b{background:var(--orange);color:#fff;border-radius:32px;padding:2px 10px;font-weight:800}
+.hero-fig{position:relative}
+.hero-fig img{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%;position:relative;z-index:1}
+.ring{position:absolute;border-radius:50%;background:conic-gradient(from 200deg,#FF5515,#FF681F,#F43C01,#FF5515);-webkit-mask:radial-gradient(circle,transparent 58%,#000 58.5%);mask:radial-gradient(circle,transparent 58%,#000 58.5%)}
+.hero .ring{width:min(70vw,560px);aspect-ratio:1;right:-180px;top:-200px;opacity:.95}
+.hero-fig figcaption{margin-top:10px;font-size:13px;color:var(--muted)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--field-2);background:var(--paper)}
+.stats div{padding:24px 20px;border-right:1px solid var(--field-2)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font-family:var(--display);font-weight:900;font-size:clamp(36px,4.6vw,56px);line-height:.9;color:var(--orange)}
+.stats strong small{font-size:.45em;color:var(--ink);margin-left:4px;font-family:var(--kr);font-weight:800}
+.stats span{display:block;margin-top:10px;font-size:14px;color:var(--ink-2)}
+
+/* schematic */
+.sec{padding-block:80px}
+.sec-head{display:grid;grid-template-columns:240px 1fr;gap:32px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.25;letter-spacing:-.01em}
+.sec-head p{color:var(--ink-2);margin-top:12px;max-width:40em}
+.schem{overflow-x:auto;border-radius:16px;box-shadow:inset 0 0 0 1px var(--field-2);background:var(--paper)}
+.schem svg{display:block;min-width:820px;width:100%;height:auto}
+.schem a{cursor:pointer}
+.schem a:hover .node{fill:var(--orange-soft)}
+
+/* journey */
+.journey{position:relative}
+.journey::before{content:"";position:absolute;left:calc(max(16px,env(safe-area-inset-left,0px)) + 21px);top:0;bottom:0;width:6px;border-radius:3px;background:linear-gradient(var(--orange),#FF7A38 50%,var(--orange));opacity:.9}
+@media (min-width:1152px){.journey::before{left:calc((100vw - 1120px)/2 + 37px)}}
+.station{position:relative;padding:56px 0 56px 76px}
+.pin{position:absolute;left:0;top:56px;width:50px;height:50px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:26px;box-shadow:0 0 0 6px var(--paper)}
+.st-meta{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.time{font-family:var(--display);font-weight:900;font-size:22px;color:var(--ink)}
+.chip{font-size:12px;font-weight:800;border-radius:32px;padding:3px 10px;background:var(--orange-soft);color:var(--orange-deep)}
+.chip.blue{background:#E0F7FA;color:#03586E}
+.station h3{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.3;margin-top:8px}
+.station .body{margin-top:14px;max-width:42em;color:var(--ink-2)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px}
+.fact{min-width:120px}
+.fact b{display:block;font-family:var(--display);font-weight:900;font-size:34px;line-height:1;color:var(--ink)}
+.fact b small{font-family:var(--kr);font-size:15px;font-weight:800;margin-left:2px}
+.fact span{font-size:13px;color:var(--muted)}
+.media{display:grid;gap:12px;margin-top:28px;grid-template-columns:repeat(6,1fr)}
+.media figure{margin:0;position:relative;min-width:0}
+.media .w6{grid-column:span 6}.media .w4{grid-column:span 4}.media .w3{grid-column:span 3}.media .w2{grid-column:span 2}
+.media img,.media video{width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--field)}
+.media .r169{aspect-ratio:16/9}.media .r43{aspect-ratio:4/3}.media .r34{aspect-ratio:3/4}
+.media figcaption{position:absolute;left:10px;bottom:10px;right:10px;font-size:12px;font-weight:700;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6);pointer-events:none}
+.snd{position:absolute;right:10px;top:10px;border:0;border-radius:4px;background:rgba(17,18,34,.72);color:#fff;font:700 12px/1 var(--kr);padding:8px 10px;cursor:pointer}
+.snd:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.vbadge{position:absolute;left:10px;top:10px;font-size:11px;font-weight:800;color:#fff;background:var(--orange);border-radius:4px;padding:3px 7px;letter-spacing:.04em}
+
+/* transit band */
+.transit{position:relative;margin:8px 0;padding:0 0 0 76px}
+.transit .card{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:0;border-radius:16px;overflow:hidden;background:var(--ink);color:#fff}
+.transit video{width:100%;aspect-ratio:16/9;object-fit:cover;height:100%}
+.transit .txt{padding:24px 26px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.transit .txt .k{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--orange-200)}
+.transit .txt h4{margin:0;font-size:22px;font-weight:800;line-height:1.35}
+.transit .txt p{font-size:14px;color:#DEDBD7}
+.transit .route{font-family:var(--display);font-weight:900;font-size:20px;color:#fff}
+.transit::before{content:"";position:absolute;left:14px;top:50%;width:20px;height:20px;border-radius:50%;background:var(--paper);border:5px solid var(--orange);transform:translateY(-50%)}
+
+/* compare */
+.compare{background:var(--field)}
+.bars{display:grid;gap:22px}
+.bar-row{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}
+.bar-row .lbl{font-weight:800}
+.bar-track{display:grid;gap:6px}
+.bar{height:30px;border-radius:4px;display:flex;align-items:center;padding:0 10px;font-weight:800;font-size:14px;white-space:nowrap;min-width:fit-content}
+.bar.y14{background:var(--field-2);color:var(--ink)}
+.bar.y26{background:var(--orange);color:#fff}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--ink-2);margin-bottom:22px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.total{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--field-2)}
+.total .big{font-family:var(--display);font-weight:900;font-size:clamp(56px,9vw,112px);line-height:.8;color:var(--orange)}
+.total .from{font-family:var(--display);font-weight:900;font-size:clamp(32px,5vw,56px);line-height:.8;color:var(--muted)}
+.total p{flex-basis:100%;color:var(--ink-2)}
+
+/* money */
+.money{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.flow{display:grid;gap:10px}
+.flow .row{display:grid;grid-template-columns:110px 1fr 90px;gap:12px;align-items:center;font-size:14px}
+.flow .fill{height:22px;border-radius:4px}
+.flow .v{font-weight:800;text-align:right}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.pillar{border-radius:16px;box-shadow:inset 0 0 0 1px var(--field-2);padding:22px}
+.pillar b{display:block;font-size:17px;margin-top:6px}
+.pillar p{font-size:14px;color:var(--ink-2);margin-top:6px}
+
+/* film (연속 재생) */
+.film{background:var(--ink);color:#fff}
+.film-head{padding-block:72px 28px;display:grid;grid-template-columns:240px 1fr;gap:32px}
+.film-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.25;color:#fff}
+.film-head p{color:#C9C4BC;margin-top:12px;max-width:40em}
+.screen{position:relative;max-width:1120px;margin:0 auto;aspect-ratio:16/9;width:100%;background:#000;border-radius:16px;overflow:hidden}
+.screen video{width:100%;height:100%;object-fit:cover;background:#000}
+.lower{position:absolute;left:0;right:0;bottom:0;padding:60px 24px 22px;background:linear-gradient(transparent,rgba(17,18,34,.85));pointer-events:none}
+.lower .t{font-family:var(--display);font-weight:900;font-size:clamp(28px,4vw,48px);line-height:.85;color:var(--orange)}
+.lower .p{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--orange-200);margin-top:10px}
+.lower .c{font-size:clamp(17px,2.2vw,26px);font-weight:800;margin-top:4px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.start{position:absolute;inset:0;display:grid;place-items:center;background:rgba(17,18,34,.45);border:0;cursor:pointer;color:#fff;font:inherit}
+.start span{display:inline-flex;align-items:center;gap:14px;background:var(--orange);border-radius:4px;padding:16px 26px;font-size:18px;font-weight:800}
+.start svg{width:22px;height:22px}
+.start:focus-visible span{outline:2px solid #fff;outline-offset:3px}
+.ctrl{padding-block:14px 12px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.ctrl button{background:#282737;color:#fff;border:0;border-radius:4px;height:38px;min-width:38px;padding:0 12px;font:800 13px var(--kr);cursor:pointer;display:inline-flex;align-items:center;gap:6px;justify-content:center}
+.ctrl button:hover{background:#3F3D4C}
+.ctrl button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.ctrl svg{width:16px;height:16px}
+.btns{display:flex;gap:6px}
+.track{display:flex;gap:3px;height:38px;align-items:stretch;min-width:0}
+.seg{position:relative;flex:1 1 0;background:#282737;border-radius:2px;cursor:pointer;border:0;padding:0;min-width:4px;overflow:hidden}
+.seg.move{background:repeating-linear-gradient(90deg,#282737 0 6px,#1B1C2E 6px 10px)}
+.seg i{position:absolute;inset:0 auto 0 0;width:0;background:var(--orange)}
+.seg.done i{width:100%;background:#B8441A}
+.seg:hover{outline:1px solid #8E8A96}
+.seg:focus-visible{outline:2px solid #fff}
+.clock{font-family:var(--display);font-weight:900;font-size:24px;color:var(--orange);min-width:74px;text-align:right}
+.film-legend{padding-block:0 72px;display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#8E8A96}
+.film-legend i{display:inline-block;width:18px;height:10px;border-radius:2px;margin-right:6px;vertical-align:0}
+@media (max-width:860px){
+  .film-head{grid-template-columns:1fr;gap:8px;padding-block:56px 24px}
+  .ctrl{grid-template-columns:1fr auto}
+  .ctrl .track{grid-column:1/-1;grid-row:2;height:26px}
+}
+footer{background:var(--ink);color:#DEDBD7;position:relative;overflow:hidden;border-top:1px solid #3F3D4C}
+footer .wrap{padding-block:56px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end;position:relative;z-index:1}
+footer h2{color:#fff;font-size:clamp(26px,4vw,44px);font-weight:800;line-height:1.25}
+footer h2 em{font-style:normal;color:var(--orange)}
+footer img{height:34px;width:auto}
+footer small{display:block;margin-top:14px;font-size:12px;color:#C9C4BC}
+footer .ring{width:420px;aspect-ratio:1;left:-160px;bottom:-240px}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px;padding-block:40px 48px}
+  .hero .ring{right:-220px;top:-120px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--field-2)}
+  .sec-head{grid-template-columns:1fr;gap:8px}
+  .transit .card{grid-template-columns:1fr}
+  .money{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .station{padding-left:60px}.transit{padding-left:60px}
+  .pin{width:40px;height:40px;font-size:21px}
+  .journey::before{left:calc(max(16px,env(safe-area-inset-left,0px)) + 17px)}
+  .transit::before{left:10px}
+  .media .w3,.media .w2,.media .w4{grid-column:span 6}
+  .bar-row{grid-template-columns:1fr;gap:6px}
+  .flow .row{grid-template-columns:80px 1fr 80px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+
+<header class="top"><div class="wrap">
+  <img src="assets/WorldVision-Logo-Primary.svg" alt="월드비전">
+  <span>탄자니아 은다바시 사업장 · 바소다위시 마을 식수시설 모니터링 · 2026.09.04</span>
+</div></header>
+
+<section class="hero">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="tag"><b>2014 → 2026</b> 사후 모니터링 리포트</div>
+      <h1>12년 전 놓은 물길,<br>지금은 <em>119곳</em>으로<br>흐르고 있습니다</h1>
+      <p class="lead">2014년 한국월드비전이 은다바시 사업장에 세운 관정과 식수시설을 다시 찾았습니다. 공용식수대 6개, 학교식수대 1개로 시작한 물길은 마을 식수위원회의 손에서 가정 95곳까지 닿는 수도망으로 자랐습니다.</p>
+      <p style="margin-top:22px"><a href="#film" style="display:inline-flex;align-items:center;gap:8px;background:#FF5515;color:#FFFFFF;text-decoration:none;font-weight:800;border-radius:4px;padding:12px 18px">모니터링 필름 바로 보기 · 약 3분</a></p>
+    </div>
+    <figure class="hero-fig" style="margin:0">
+      <img src="media/p_sign2014.jpg" alt="펌프하우스 벽면의 'Supported by World Vision Korea Endabash ADP 2014' 표지">
+      <figcaption>펌프하우스 벽에 남아 있는 2014년 지원 표지</figcaption>
+    </figure>
+  </div>
+  <div class="stats wrap num">
+    <div><strong>12<small>년</small></strong><span>2014년 준공 후 지금까지 가동</span></div>
+    <div><strong>119<small>곳</small></strong><span>연결된 수도시설 (2014년 7곳)</span></div>
+    <div><strong>1,900<small>명</small></strong><span>안전한 물을 쓰는 주민</span></div>
+    <div><strong>40,000<small>L</small></strong><span>하루 사용량 (추출 59,800L)</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">물길 한눈에 보기</div>
+      <div>
+        <h2>땅속 120m에서 아이들 손까지</h2>
+        <p>모니터링은 물이 흐르는 순서대로 진행했습니다. 아래 지점을 누르면 해당 현장 기록으로 이동합니다.</p>
+      </div>
+    </div>
+    <div class="schem">
+      <svg viewBox="0 0 1000 300" role="img" aria-label="관정에서 펌프하우스, 식수탱크를 거쳐 공용·학교·가정 식수대로 이어지는 구조도">
+        <rect x="0" y="0" width="1000" height="300" fill="#FFFFFF"/>
+        <rect x="0" y="200" width="1000" height="100" fill="#F3F2F0"/>
+        <text x="16" y="222" font-size="12" fill="#565461" font-family="NanumSquare, sans-serif">지표면 아래</text>
+        <!-- pipes -->
+        <path d="M110 250 V150 H300 H520" stroke="#FF5515" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M600 150 H700 M700 150 V70 H800 M700 150 H800 M700 150 V230 H800" stroke="#FF5515" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="400" y="138" font-size="13" fill="#E32C13" text-anchor="middle" font-weight="800" font-family="NanumSquare, sans-serif">송수관 약 1km</text>
+        <!-- borehole -->
+        <a href="#s1"><rect class="node" x="70" y="40" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#111222" stroke-width="1.5"/>
+          <text x="150" y="70" font-size="15" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">① 관정·펌프하우스</text>
+          <text x="150" y="94" font-size="12" text-anchor="middle" fill="#565461" font-family="NanumSquare, sans-serif">깊이 120m · 펌프 90m</text>
+          <text x="150" y="110" font-size="12" text-anchor="middle" fill="#565461" font-family="NanumSquare, sans-serif">태양광+전기 하이브리드</text></a>
+        <line x1="110" y1="200" x2="110" y2="290" stroke="#111222" stroke-width="2" stroke-dasharray="4 4"/>
+        <circle cx="110" cy="250" r="9" fill="#0C7993"/>
+        <text x="126" y="274" font-size="12" fill="#0C7993" font-weight="800" font-family="NanumSquare, sans-serif">수중펌프 · 시간당 4,600L</text>
+        <!-- committee -->
+        <a href="#s2"><rect class="node" x="260" y="200" width="200" height="52" rx="12" fill="#FFFFFF" stroke="#111222" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="360" y="223" font-size="14" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">② 식수위원회 운영</text>
+          <text x="360" y="242" font-size="12" text-anchor="middle" fill="#565461" font-family="NanumSquare, sans-serif">요금 징수 · 유지보수 · 저축</text></a>
+        <line x1="360" y1="158" x2="360" y2="198" stroke="#111222" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <!-- tank -->
+        <a href="#s3"><rect class="node" x="520" y="95" width="80" height="110" rx="10" fill="#FFFFFF" stroke="#111222" stroke-width="1.5"/>
+          <text x="560" y="140" font-size="15" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">③</text>
+          <text x="560" y="160" font-size="13" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">식수탱크</text>
+          <text x="560" y="180" font-size="11" text-anchor="middle" fill="#565461" font-family="NanumSquare, sans-serif">염소 소독</text></a>
+        <!-- outlets -->
+        <a href="#s4"><rect class="node" x="800" y="46" width="180" height="48" rx="10" fill="#FFFFFF" stroke="#111222" stroke-width="1.5"/>
+          <text x="890" y="76" font-size="14" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">④ 공용식수대 19</text></a>
+        <a href="#s5"><rect class="node" x="800" y="126" width="180" height="48" rx="10" fill="#FFFFFF" stroke="#111222" stroke-width="1.5"/>
+          <text x="890" y="156" font-size="14" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">⑤ 가정 연결 95</text></a>
+        <a href="#s6"><rect class="node" x="800" y="206" width="180" height="48" rx="10" fill="#FFFFFF" stroke="#111222" stroke-width="1.5"/>
+          <text x="890" y="236" font-size="14" font-weight="800" text-anchor="middle" fill="#111222" font-family="NanumSquare, sans-serif">⑥ 학교식수대 5</text></a>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="journey" aria-label="현장 기록">
+  <div class="wrap">
+
+    <div class="transit">
+      <div class="card">
+        <video data-auto muted loop playsinline preload="none" poster="media/v01_depart.jpg" src="media/v01_depart.mp4"></video>
+        <div class="txt"><span class="k">이동 · 07:59</span><h4>은다바시 사업장을 출발해 바소다위시 마을로</h4><p>붉은 흙길을 따라 관정이 있는 펌프하우스로 향합니다.</p></div>
+      </div>
+    </div>
+
+    <article class="station" id="s1">
+      <div class="pin">1</div>
+      <div class="st-meta"><span class="time num">08:06</span><span class="chip">관정 · 펌프하우스 · 태양광</span></div>
+      <h3>12년째 가동 중인 관정과 펌프하우스</h3>
+      <p class="body">깊이 120m 관정의 90m 지점에 수중펌프가 설치되어 있습니다. 처음엔 태양광 패널만으로 가동했지만, 수도망이 넓어지면서 일반 전기를 연결해 하이브리드로 운영하고 배터리로 전력을 저장합니다. 늘어난 수요에 맞춰 수중펌프도 교체했습니다.</p>
+      <div class="facts num">
+        <div class="fact"><b>120<small>m</small></b><span>관정 깊이</span></div>
+        <div class="fact"><b>90<small>m</small></b><span>펌프 설치 지점</span></div>
+        <div class="fact"><b>4,600<small>L/h</small></b><span>시간당 추출량</span></div>
+        <div class="fact"><b>59,800<small>L</small></b><span>하루 추출량</span></div>
+      </div>
+      <div class="media">
+        <figure class="w4 r169"><video data-auto muted loop playsinline preload="none" poster="media/v03_pumphouse.jpg" src="media/v03_pumphouse.mp4"></video><span class="vbadge">VIDEO</span><button class="snd" type="button">소리 켜기</button><figcaption>펌프하우스 도착</figcaption></figure>
+        <figure class="w2 r34" style="aspect-ratio:auto"><img loading="lazy" src="media/p_borehole.jpg" alt="관정 내부 배관과 수중펌프 케이블"><figcaption>관정 120m · 펌프 90m</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_pumphouse.jpg" alt="태양광 패널을 얹은 펌프하우스"><figcaption>태양광 패널을 얹은 펌프하우스</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_battery.jpg" alt="인버터와 배터리 선반"><figcaption>인버터와 전력 저장 배터리</figcaption></figure>
+        <figure class="w2 r43"><video data-auto muted loop playsinline preload="none" poster="media/v04_borehole.jpg" src="media/v04_borehole.mp4"></video><span class="vbadge">VIDEO</span><figcaption>관정 덮개를 열어 점검</figcaption></figure>
+      </div>
+      <div class="facts" style="margin-top:20px">
+        <span class="chip">수도망 확장에 따른 수중펌프 교체 · 300만 실링</span>
+        <span class="chip">일반 전기 연결, 하이브리드 전환 · 250만 실링</span>
+      </div>
+    </article>
+
+    <article class="station" id="s2">
+      <div class="pin">2</div>
+      <div class="st-meta"><span class="time num">08:22</span><span class="chip blue">식수위원회 · 지방식수공급청 · 월드비전 탄자니아</span></div>
+      <h3>시설을 지키는 건 주민들입니다</h3>
+      <p class="body">마을 식수위원회가 물값을 받아 전기료·인건비·유지보수비를 내고 남은 돈을 저축합니다. 지방식수공급청과 월드비전 탄자니아 직원이 함께 운영 현황을 점검했습니다.</p>
+      <div class="facts num">
+        <div class="fact"><b>30<small>실링</small></b><span>물 20리터 요금</span></div>
+        <div class="fact"><b>180<small>만</small></b><span>월 수입 (실링)</span></div>
+        <div class="fact"><b>130<small>만</small></b><span>월 운영비 (실링)</span></div>
+        <div class="fact"><b>50<small>만</small></b><span>월 저축 (실링)</span></div>
+      </div>
+      <div class="media">
+        <figure class="w3 r43"><img loading="lazy" src="media/p_meeting.jpg" alt="관정 앞에서 회의하는 식수위원회와 직원들"><figcaption>관정 앞 현장 점검 회의</figcaption></figure>
+        <figure class="w3 r43"><img loading="lazy" src="media/p_group.jpg" alt="펌프하우스 앞 단체 사진"><figcaption>식수위원회 · 지방식수공급청 · 월드비전 탄자니아</figcaption></figure>
+      </div>
+    </article>
+
+    <div class="transit">
+      <div class="card">
+        <video data-auto muted loop playsinline preload="none" poster="media/v05_to_tank.jpg" src="media/v05_to_tank.mp4"></video>
+        <div class="txt"><span class="k">이동 · 08:49</span><h4>펌프하우스에서 식수탱크로, 약 1km</h4><p>길에서 물통을 실은 수레를 미는 주민을 만났습니다. 물은 이 길 아래 송수관을 따라 언덕 위 탱크로 올라갑니다.</p></div>
+      </div>
+    </div>
+
+    <article class="station" id="s3">
+      <div class="pin">3</div>
+      <div class="st-meta"><span class="time num">08:53</span><span class="chip">식수탱크 · 염소 소독</span></div>
+      <h3>언덕 위 탱크에서 마을 전체로</h3>
+      <p class="body">관정에서 약 1km 떨어진 식수탱크입니다. 옥상의 염소 분사 시설로 소독한 물이 마을로 내려갑니다. 탱크는 분기마다 청소하고, 분기마다 정부 기준 수질검사를 받습니다.</p>
+      <div class="facts">
+        <span class="chip">분기별 탱크 청소</span><span class="chip">분기별 정부 기준 수질검사</span><span class="chip">옥상 염소 분사 시설</span>
+      </div>
+      <div class="media">
+        <figure class="w4 r169"><video data-auto muted loop playsinline preload="none" poster="media/v06_tank_approach.jpg" src="media/v06_tank_approach.mp4"></video><span class="vbadge">VIDEO</span><figcaption>식수탱크로 다가가는 길</figcaption></figure>
+        <figure class="w2" style="aspect-ratio:auto"><img loading="lazy" src="media/p_tank.jpg" alt="원통형 콘크리트 식수탱크" style="aspect-ratio:3/4"><figcaption>식수탱크</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_chlorine.jpg" alt="탱크 옥상의 염소 분사 통"><figcaption>옥상 염소 분사 시설</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_village.jpg" alt="탱크 옥상에서 본 마을"><figcaption>탱크 옥상에서 본 급수 마을</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_lookdown.jpg" alt="탱크 위에서 내려다본 점검단"><figcaption>탱크 위에서 내려다본 점검단</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="station" id="s4">
+      <div class="pin">4</div>
+      <div class="st-meta"><span class="time num">09:08</span><span class="chip">공용식수대 · 수도 계량기</span></div>
+      <h3>수도꼭지를 틀면 물이 나옵니다</h3>
+      <p class="body">2014년 6개였던 공용식수대는 19개로 늘었습니다. 식수대마다 계량기가 달려 있어 사용량에 따라 물값을 걷습니다. 물을 받은 주민은 머리에 이고 집으로 돌아갑니다.</p>
+      <div class="media">
+        <figure class="w3 r169"><video data-auto muted loop playsinline preload="none" poster="media/v08_tap_woman.jpg" src="media/v08_tap_woman.mp4"></video><span class="vbadge">VIDEO</span><button class="snd" type="button">소리 켜기</button><figcaption>공용식수대에서 물 받기</figcaption></figure>
+        <figure class="w3 r169"><video data-auto muted loop playsinline preload="none" poster="media/v10_walk_home.jpg" src="media/v10_walk_home.mp4"></video><span class="vbadge">VIDEO</span><figcaption>물을 이고 집으로</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_tap.jpg" alt="원형 배수대가 있는 공용식수대"><figcaption>공용식수대</figcaption></figure>
+        <figure class="w2 r43"><img loading="lazy" src="media/p_meter.jpg" alt="식수대 계량기 박스"><figcaption>계량기 박스</figcaption></figure>
+        <figure class="w2 r43"><video data-auto muted loop playsinline preload="none" poster="media/v09_tap_flow.jpg" src="media/v09_tap_flow.mp4"></video><span class="vbadge">VIDEO</span><figcaption>수압 확인</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="station" id="s5">
+      <div class="pin">5</div>
+      <div class="st-meta"><span class="time num">09:13</span><span class="chip">가정 방문</span></div>
+      <h3>식수대에서 집까지</h3>
+      <p class="body">식수대에서 물을 받아 온 주민의 집을 찾았습니다. 지금은 가정 95곳이 수도에 직접 연결되어 있습니다. 주민 인터뷰는 영상에서 소리를 켜고 들을 수 있습니다.</p>
+      <div class="facts num">
+        <div class="fact"><b>95<small>곳</small></b><span>가정 연결 수도</span></div>
+        <div class="fact"><b>약 21<small>L</small></b><span>1인당 하루 사용량 (40,000L ÷ 1,900명)</span></div>
+      </div>
+      <div class="media">
+        <figure class="w4 r169"><video data-auto muted loop playsinline preload="none" poster="media/v12_interview_home.jpg" src="media/v12_interview_home.mp4"></video><span class="vbadge">VIDEO</span><button class="snd" type="button">소리 켜기</button><figcaption>주민 인터뷰</figcaption></figure>
+        <figure class="w2 r43" style="aspect-ratio:auto"><img loading="lazy" src="media/p_home.jpg" alt="초가집 앞에서 빨래하는 주민" style="height:100%"><figcaption>집 앞에서 빨래하는 주민</figcaption></figure>
+      </div>
+    </article>
+
+    <div class="transit">
+      <div class="card">
+        <video data-auto muted loop playsinline preload="none" poster="media/v13_to_school.jpg" src="media/v13_to_school.mp4"></video>
+        <div class="txt"><span class="k">이동 · 09:19</span><h4>마지막 목적지, 마을 초등학교</h4><p>2014년 1개였던 학교식수대는 이제 5개입니다.</p></div>
+      </div>
+    </div>
+
+    <article class="station" id="s6">
+      <div class="pin">6</div>
+      <div class="st-meta"><span class="time num">09:21</span><span class="chip">학교식수대</span></div>
+      <h3>쉬는 시간, 식수대 앞에 모인 아이들</h3>
+      <p class="body">학교식수대 앞에 아이들의 물통이 줄지어 있습니다. 교실 옆에서 소독된 물을 받을 수 있습니다.</p>
+      <div class="media">
+        <figure class="w4 r169"><video data-auto muted loop playsinline preload="none" poster="media/v14_school_tap.jpg" src="media/v14_school_tap.mp4"></video><span class="vbadge">VIDEO</span><button class="snd" type="button">소리 켜기</button><figcaption>학교식수대</figcaption></figure>
+        <figure class="w2 r43" style="aspect-ratio:auto"><img loading="lazy" src="media/p_school_tap.jpg" alt="물통을 채우는 학생들" style="height:100%"><figcaption>물통을 채우는 학생들</figcaption></figure>
+        <figure class="w6 r169"><video data-auto muted loop playsinline preload="none" poster="media/v16_children_wave.jpg" src="media/v16_children_wave.mp4"></video><span class="vbadge">VIDEO</span><button class="snd" type="button">소리 켜기</button><figcaption>손을 흔드는 아이들</figcaption></figure>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="sec compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">2014 vs 2026</div>
+      <div><h2>7곳에서 119곳으로</h2><p>2014년 사업으로 설치한 식수대와 2026년 9월 현재 연결된 수도시설 수입니다.</p></div>
+    </div>
+    <div class="legend"><span><i style="background:#DEDBD7"></i>2014년 설치</span><span><i style="background:#FF5515"></i>2026년 현재</span></div>
+    <div class="bars num">
+      <div class="bar-row"><span class="lbl">공용식수대</span><div class="bar-track"><div class="bar y14" style="width:calc(6/95*100%)">6</div><div class="bar y26" style="width:calc(19/95*100%)">19</div></div></div>
+      <div class="bar-row"><span class="lbl">학교식수대</span><div class="bar-track"><div class="bar y14" style="width:calc(1/95*100%)">1</div><div class="bar y26" style="width:calc(5/95*100%)">5</div></div></div>
+      <div class="bar-row"><span class="lbl">가정 연결</span><div class="bar-track"><div class="bar y14" style="width:auto;background:transparent;padding-left:0;color:#565461">신규</div><div class="bar y26" style="width:100%">95</div></div></div>
+    </div>
+    <div class="total num"><span class="from">7</span><span class="from">→</span><span class="big">119</span><p>2014년 7곳에서 시작한 수도망이 12년 동안 꾸준히 넓어졌습니다. 하루 추출량 59,800L 중 40,000L를 사용하고 있어 여유 용량도 있습니다.</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">지속가능성</div>
+      <div><h2>12년을 버틴 이유</h2><p>시설은 월드비전이 지었고, 운영은 마을 식수위원회가 맡고 있습니다.</p></div>
+    </div>
+    <div class="money">
+      <div>
+        <p style="font-weight:800;margin-bottom:14px">식수위원회 월간 수지 (실링)</p>
+        <div class="flow num">
+          <div class="row"><span>수입</span><div class="fill" style="background:#0C7993;width:100%"></div><span class="v">1,800,000</span></div>
+          <div class="row"><span>운영비</span><div class="fill" style="background:#DEDBD7;width:72.2%"></div><span class="v">1,300,000</span></div>
+          <div class="row"><span>저축</span><div class="fill" style="background:#FF5515;width:27.8%"></div><span class="v">500,000</span></div>
+        </div>
+        <p style="font-size:13px;color:#565461;margin-top:12px">운영비: 전기료, 인건비, 유지보수 비용 등</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><span class="eyebrow">운영</span><b>주민 식수위원회</b><p>요금 징수와 유지보수를 마을이 직접 맡습니다.</p></div>
+        <div class="pillar"><span class="eyebrow">재정</span><b>매달 흑자</b><p>운영비를 내고도 매달 50만 실링을 저축합니다.</p></div>
+        <div class="pillar"><span class="eyebrow">품질</span><b>정부 협력</b><p>분기별 청소와 정부 기준 수질검사를 지킵니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="film" id="film" aria-label="모니터링 필름">
+  <div class="wrap">
+    <div class="film-head">
+      <div class="eyebrow">모니터링 필름</div>
+      <div><h2>07:59부터 09:25까지, 하루를 이어 보기</h2><p>출발부터 학교 방문까지 현장 영상 17개를 시간 순서대로 이었습니다. 약 3분이며, 줄무늬 구간은 차량 이동 장면입니다.</p></div>
+    </div>
+    <div class="screen">
+      <video id="fv" playsinline preload="metadata" poster="media/v02_arrive.jpg"></video>
+      <div class="lower" aria-live="polite">
+        <div class="t num" id="lt">08:06</div>
+        <div class="p" id="lp">펌프하우스 도착</div>
+        <div class="c" id="lc">12년 전 세운 펌프하우스가 그대로 서 있습니다</div>
+      </div>
+      <button class="start" id="start" type="button" aria-label="모니터링 필름 재생">
+        <span><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>모니터링 필름 재생 · 약 3분</span>
+      </button>
+    </div>
+    <div class="ctrl">
+      <div class="btns">
+        <button type="button" id="prev" aria-label="이전 장면"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 5 9 12l9 7"/><path d="M6 5v14"/></svg></button>
+        <button type="button" id="play" aria-label="재생"><svg id="playIco" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+        <button type="button" id="next" aria-label="다음 장면"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 5 9 7-9 7"/><path d="M18 5v14"/></svg></button>
+        <button type="button" id="mute">소리 켜기</button>
+      </div>
+      <div class="track" id="track" role="group" aria-label="장면 목록"></div>
+      <div class="clock num" id="clock">07:59</div>
+    </div>
+    <div class="film-legend"><span><i style="background:#FF5515"></i>현장 장면</span><span><i style="background:repeating-linear-gradient(90deg,#282737 0 6px,#1B1C2E 6px 10px)"></i>이동 구간</span><span>막대를 누르면 해당 장면으로 이동합니다</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h2>한 번 놓은 물길은<br><em>마을이 이어 갑니다</em></h2>
+      <small>탄자니아 은다바시 사업장 바소다위시 마을 · 2026년 9월 4일 모니터링 · 국제사업 직원 공유용</small>
+    </div>
+    <img src="assets/WorldVision-Logo-Reverse.svg" alt="월드비전">
+  </div>
+</footer>
+
+<script>
+(function(){
+  var vids=[].slice.call(document.querySelectorAll('video[data-auto]'));
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+      if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}
+    });},{threshold:.35});
+    vids.forEach(function(v){io.observe(v)});
+  }
+  vids.forEach(function(v){v.addEventListener('click',function(){v.paused?v.play():v.pause()})});
+  document.querySelectorAll('.snd').forEach(function(b){
+    b.addEventListener('click',function(e){e.stopPropagation();var v=b.parentNode.querySelector('video');
+      document.querySelectorAll('video').forEach(function(o){if(o!==v){o.muted=true}});
+      document.querySelectorAll('.snd').forEach(function(o){if(o!==b)o.textContent='소리 켜기'});
+      var fm=document.getElementById('mute');if(fm)fm.textContent='소리 켜기';
+      v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play();}b.textContent=v.muted?'소리 켜기':'소리 끄기';});
+  });
+})();
+(function(){
+  var C=[
+    ['v01_depart','07:59','이동','은다바시 사업장을 출발해 바소다위시 마을로',1],
+    ['v02_arrive','08:06','① 펌프하우스','12년 전 세운 펌프하우스가 그대로 서 있습니다'],
+    ['v03_pumphouse','08:07','① 펌프하우스','태양광과 일반 전기를 함께 쓰는 하이브리드 운영'],
+    ['v04_borehole','08:12','① 관정','깊이 120m, 펌프는 90m 지점 · 시간당 4,600L'],
+    ['v05_to_tank','08:49','이동','식수탱크까지 약 1km',1],
+    ['v06_tank_approach','08:53','③ 식수탱크','분기마다 청소하고 정부 기준 수질검사'],
+    ['v07_meter','09:08','④ 공용식수대','식수대마다 계량기로 사용량을 잽니다'],
+    ['v08_tap_woman','09:09','④ 공용식수대','물 20리터에 30실링'],
+    ['v09_tap_flow','09:09','④ 공용식수대','공용식수대 6곳에서 19곳으로'],
+    ['v10_walk_home','09:10','⑤ 귀가','받은 물을 이고 집으로'],
+    ['v11_washing','09:13','⑤ 가정','집 앞에서 빨래하는 주민'],
+    ['v12_interview_home','09:14','⑤ 주민 인터뷰','소리를 켜고 들어 보세요'],
+    ['v13_to_school','09:19','이동','마을 초등학교로',1],
+    ['v14_school_tap','09:21','⑥ 학교식수대','학교식수대 1곳에서 5곳으로'],
+    ['v15_school_voice','09:22','⑥ 학교식수대','쉬는 시간의 식수대'],
+    ['v16_children_wave','09:23','⑥ 학교식수대','손을 흔드는 아이들'],
+    ['v17_children','09:25','바소다위시 마을','1,900명이 이 물을 마십니다']
+  ];
+  var D=[9,12,10,10,9,14,8,11,12,16,11,18,12,15,14,4,9];
+  var v=document.getElementById('fv'),track=document.getElementById('track'),cur=0,started=false;
+  var lt=document.getElementById('lt'),lp=document.getElementById('lp'),lc=document.getElementById('lc'),clock=document.getElementById('clock');
+  var segs=C.map(function(c,i){var b=document.createElement('button');b.type='button';b.className='seg'+(c[4]?' move':'');b.style.flexGrow=D[i];b.setAttribute('aria-label',c[1]+' '+c[2]);b.title=c[1]+' · '+c[2];b.appendChild(document.createElement('i'));b.onclick=function(){go(i,true)};track.appendChild(b);return b;});
+  function paint(){segs.forEach(function(s,i){s.classList.toggle('done',i<cur);if(i!==cur)s.firstChild.style.width='';});}
+  function hideStart(){started=true;document.getElementById('start').hidden=true;}
+  function go(i,play){cur=(i+C.length)%C.length;var c=C[cur];v.src='media/'+c[0]+'.mp4';v.poster='media/'+c[0]+'.jpg';
+    lt.textContent=c[1];lp.textContent=c[2];lc.textContent=c[3];clock.textContent=c[1];paint();
+    if(play){hideStart();document.querySelectorAll('video[data-auto]').forEach(function(o){o.muted=true});document.querySelectorAll('.snd').forEach(function(o){o.textContent='소리 켜기'});var p=v.play();if(p&&p.catch)p.catch(function(){});}}
+  v.addEventListener('timeupdate',function(){if(v.duration)segs[cur].firstChild.style.width=(v.currentTime/v.duration*100)+'%';});
+  v.addEventListener('ended',function(){if(cur<C.length-1)go(cur+1,true);else setIco(false);});
+  var ico=document.getElementById('playIco');
+  function setIco(p){ico.innerHTML=p?'<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>':'<path d="M7 4.5v15l13-7.5z"/>';document.getElementById('play').setAttribute('aria-label',p?'일시정지':'재생');}
+  v.addEventListener('play',function(){setIco(true)});v.addEventListener('pause',function(){setIco(false)});
+  document.getElementById('start').onclick=function(){go(0,true)};
+  document.getElementById('play').onclick=function(){if(!started){go(0,true);return;}v.paused?v.play():v.pause();};
+  document.getElementById('prev').onclick=function(){go(cur-1,true)};
+  document.getElementById('next').onclick=function(){go(cur+1,true)};
+  var mb=document.getElementById('mute');v.muted=true;
+  mb.onclick=function(){v.muted=!v.muted;mb.textContent=v.muted?'소리 켜기':'소리 끄기';};
+  v.addEventListener('click',function(){if(started)(v.paused?v.play():v.pause())});
+})();
+</script>
+
+</body>
+</html>
